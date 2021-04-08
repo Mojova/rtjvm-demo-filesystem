@@ -20,7 +20,7 @@ class Mkdir(name: String) extends Command {
   def doMkdir(state: State, name: String): State = {
     val wd = state.wd
     // 1. all the directories in the full path
-    val allDirsInPath = wd.getAllDirectoriesInPath()
+    val allDirsInPath = wd.getAllDirectoriesInPath
 
     // 2. create new directory entry in the working directory
     val newDir = Directory.empty(wd.path, name)
